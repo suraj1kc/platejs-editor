@@ -1,9 +1,8 @@
 import React from 'react';
-
 import { withRef } from '@udecode/cn';
 import {
   type ImagePlugin,
-  type MediaEmbedPlugin,
+  MediaEmbedPlugin,
   useMediaToolbarButton,
 } from '@udecode/plate-media/react';
 
@@ -19,9 +18,12 @@ export const MediaToolbarButton = withRef<
 >(({ nodeType, ...rest }, ref) => {
   const { props } = useMediaToolbarButton({ nodeType });
 
+  // Conditionally render the correct icon based on nodeType
+  const IconComponent = nodeType === MediaEmbedPlugin.key ? Icons.youtube : Icons.image;
+
   return (
     <ToolbarButton ref={ref} {...props} {...rest}>
-      <Icons.image />
+      <IconComponent />
     </ToolbarButton>
   );
 });

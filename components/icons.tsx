@@ -64,6 +64,7 @@ import {
   Ungroup,
   WrapText,
   X,
+  Youtube,
 } from 'lucide-react';
 
 import type { LucideIcon } from 'lucide-react';
@@ -229,6 +230,7 @@ export const Icons = {
   underline: Underline,
   unlink: Link2Off,
   viewing: Eye,
+  youtube: Youtube,
 
   // www
   gitHub: (props: LucideProps) => (
